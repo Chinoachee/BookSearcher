@@ -1,0 +1,48 @@
+﻿<Page x:Class="BooksSearcher.Frames.Autorization.RegistrationFrame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BooksSearcher.Frames.Autorization"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegistrationFrame">
+    <Grid Background="#FBF6EA">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="#807C62">
+            <StackPanel Grid.Column="0" Orientation="Vertical" Margin="15,100,15,100">
+                <TextBlock Text="Login"
+                           FontSize="15"
+                           Style="{StaticResource keyFont}"
+                           Margin="0 5"/>
+                <TextBox x:Name="loginTextBox"/>
+                <TextBlock Text="Password"
+                           FontSize="15"
+                           Style="{StaticResource keyFont}"
+                           Margin="0 5"/>
+                <PasswordBox x:Name="passwordTextBox"/>
+                <TextBlock Text="Email"
+                           FontSize="15"
+                           Style="{StaticResource keyFont}"
+                           Margin="0 5"/>
+                <TextBox x:Name="emailTextBox"/>
+                <Button x:Name="registationButton"
+                        Height="25"
+                        Content="Зарегистрироваться"
+                        Margin="0 10"
+                        Click="registationButton_Click"
+                        Style="{StaticResource AutorizationButtonStyle}"
+                        FontSize="14"/>
+                <Button x:Name="backToLogin"
+                        Height="25"
+                        Content="Назад"
+                        Click="backToLogin_Click"
+                        Style="{StaticResource AutorizationButtonStyle}"
+                        FontSize="14"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

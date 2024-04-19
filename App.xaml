@@ -1,0 +1,16 @@
+﻿<Application x:Class="BooksSearcher.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BooksSearcher"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resourse/Buttons/AutorizationButtonStyle.xaml"/>
+                <ResourceDictionary Source="Resourse/Dictionary1.xaml"/>
+                <ResourceDictionary Source="Resourse/Buttons/ButtonInMainMenu.xaml"/>
+                <ResourceDictionary Source="Resourse/Buttons/OrangeButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

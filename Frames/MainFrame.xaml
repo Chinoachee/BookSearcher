@@ -1,0 +1,92 @@
+﻿<Page x:Class="BooksSearcher.Frames.MainFrame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BooksSearcher.Frames"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainFrame">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="#FBF6EA">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Horizontal">
+                    <Ellipse Width="62" Height="64" RenderTransformOrigin="0.5,0.5">
+                        <Ellipse.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Ellipse.RenderTransform>
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Pictures/userImage.png" Stretch="Fill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock x:Name="userNameTextBlock" Margin="10 10"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackPanel Orientation="Vertical" Background="#807C62">
+                    <Button Content="Найти книгу"
+                            Style="{StaticResource ButtonInMainMenuStyle}"
+                            Height="25"
+                            Margin="5"
+                            Click="toFindBook_Click"/>
+                    <Button Content="Мои книги"
+                            Style="{StaticResource ButtonInMainMenuStyle}"
+                            Height="25"
+                            Margin="5"
+                            Click="toMyBook_CLick"/>
+                </StackPanel>
+                <Button VerticalAlignment="Bottom"
+                        Content="Выход"
+                        Style="{StaticResource ButtonInMainMenuStyle}"
+                        Height="25"
+                        Margin="5"
+                        Click="ExitButton_Click"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" Background="#F5F1E9">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <TextBlock Text="Введите название книги"
+                           Margin="5 3"
+                           FontWeight="Bold"
+                           FontSize="11"
+                           Foreground="#595752"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="searchTextBox"
+                             Margin="5"
+                             Width="550"
+                             Height="25"
+                             Padding="3"
+                             FontWeight="Bold"/>
+                    <Button HorizontalAlignment="Right"
+                            Width="50"
+                            Height="25"
+                            Content="Найти"
+                            Style="{StaticResource SearhButtonStyle}"
+                            Click="searchBooks_Click"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Frame x:Name="mainViewFrame" NavigationUIVisibility="Hidden"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
